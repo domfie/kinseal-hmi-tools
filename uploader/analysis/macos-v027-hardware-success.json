@@ -1,0 +1,21 @@
+{
+  "version": "0.2.7",
+  "model": "AMZ043W01",
+  "platform": "native macOS / Apple Silicon",
+  "privileges": "sudo",
+  "options": [
+    "--detach-kernel-driver",
+    "--experimental"
+  ],
+  "package_sha256": "899dd88b49c755a3eeb82090764f3f941bca1d96abcc1abb966a5b7e4f5c4006",
+  "payload_bytes": 633178,
+  "result": {
+    "start_acknowledged": true,
+    "commit_acknowledged": true,
+    "reset_written": true,
+    "screen_verified_by_program": false,
+    "user_reports_upload_worked": true
+  },
+  "basis": "User-pasted console output and explicit success report. Attached out2.log is root-owned mode 0600 and was not read by the agent.",
+  "scope": "Native project upload only; other models, firmware/font updates and all older macOS versions are not established by this test."
+}

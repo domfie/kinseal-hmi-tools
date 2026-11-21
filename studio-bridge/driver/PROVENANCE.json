@@ -1,0 +1,19 @@
+{
+  "basis": "Derived from user-provided June 2026 ARM64 WinUSB INF",
+  "original_archive_sha256": "ef84f9d5819e54896cbf9419bee03d887fa34c5ee9f78105c3b104545e49973e",
+  "original_inf_sha256": "06ce9e6b53b39aefeee88b53650931b694b69986e04ad45cf6642f11bd23c997",
+  "new_inf_sha256": "c2748069f179460dc4b62a4221a9856a8277e81ed4b35a28ba8ac30b1580b218",
+  "changes": [
+    "ProviderName and ManufacturerName = domfie",
+    "DeviceName = Smart Control Device",
+    "DriverVer = 11/21/2026,1.0.2.0",
+    "Renamed INF and normalized ASCII/CRLF"
+  ],
+  "unchanged": [
+    "Hardware ID USB\\VID_7365&PID_616C",
+    "DeviceInterfaceGUIDs {F5970E6C-EBEE-424F-9249-8FECBAAB028F}",
+    "WinUSB include/needs and ARM64 install sections"
+  ],
+  "signature": "Unsigned INF, no signed catalog, Windows-provided Microsoft winusb.sys is not bundled",
+  "validation": "Functional INF directives compared to original; script hashes and static delimiters checked. New package installation on Windows pending."
+}

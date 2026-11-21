@@ -1,0 +1,22 @@
+uid=501 euid=501
+IOHIDManager created for enumeration only
+matching_hid_devices=1
+usage_page=65286 usage=1 max_input=256 max_output=256
+hid_report_descriptor=0606ff0901a101150026ff007508960001090181029600010901910295080901b102c0
+IOHIDDeviceOpen=0x00000000
+model_query_set_report=0x00000000 bytes=32
+model_query_padded_set_report=0x00000000 bytes=256
+matching_usb_devices=1
+advertised_configuration=LIBUSB_SUCCESS / LIBUSB_TRANSFER_COMPLETED
+configuration_value=1 interfaces=1
+interface=0 alt=0 class=3 interface_extra=092111010001222300
+libusb_open=LIBUSB_SUCCESS / LIBUSB_TRANSFER_COMPLETED
+current_configuration=1 result=LIBUSB_SUCCESS / LIBUSB_TRANSFER_COMPLETED
+raw_report_descriptor_length=35 hex=0606ff0901a101150026ff007508960001090181029600010901910295080901b102c0
+matching_hid_devices=1
+usage_page=65286 usage=1 max_input=256 max_output=256
+hid_report_descriptor=0606ff0901a101150026ff007508960001090181029600010901910295080901b102c0
+IOHIDDeviceOpen=0x00000000
+model_query_set_report=0x00000000 bytes=32
+model_query_padded_set_report=0x00000000 bytes=256
+RESULT: no native HID model reply

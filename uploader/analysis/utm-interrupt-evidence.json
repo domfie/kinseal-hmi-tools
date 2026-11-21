@@ -1,0 +1,33 @@
+{
+  "basis": "user reports UTM with direct USB forwarding; native x86 upload succeeds, both ARM64 and emulated x86 uploads fail under Windows ARM",
+  "hypothesis": "Oversized interrupt OUT writes are acknowledged by QEMU before usbredirhost rejects them",
+  "sources": [
+    {
+      "url": "https://github.com/qemu/qemu/blob/master/hw/usb/redirect.c",
+      "function": "usbredir_handle_interrupt_out_data",
+      "fact": "Source comment states interrupt OUT success is reported immediately rather than awaiting host completion."
+    },
+    {
+      "url": "https://github.com/SPICEorg/usbredir/blob/master/usbredirhost/usbredirhost.c",
+      "function": "usbredirhost_interrupt_packet",
+      "fact": "Rejects data_len greater than endpoint.max_packetsize with usb_redir_inval."
+    }
+  ],
+  "device_interrupt_out_max_packet_bytes": 256,
+  "change": "Bound each interrupt OUT WinUSB write to descriptor MaxPacket; bulk path unchanged; no timing sleeps or new Kinseal commands.",
+  "validation": {
+    "regression": "Modeled published host rejection with immediate guest success; 257-byte write fails delivery before fix, all sizes through 212104 pass afterward. This is a host-side model, not a real UTM capture.",
+    "hardware_UTM": "User confirmed version 0.2.5 successfully uploaded and display adopted the new project under UTM / Windows ARM.",
+    "UTM_embedded_component_versions": "not yet verified"
+  },
+  "hardware_result": {
+    "version": "0.2.5",
+    "environment": "UTM on Apple Silicon, Windows ARM, direct USB forwarding",
+    "driver": "WinUSB",
+    "display_project_updated": true,
+    "confirmation": "user report",
+    "confirmation_date": "2026-11-21",
+    "upload_log_for_success": "not supplied",
+    "conclusion": "Packet-sized interrupt OUT writes resolved the reported upload failure; exact installed usbredir/QEMU versions remain unverified."
+  }
+}

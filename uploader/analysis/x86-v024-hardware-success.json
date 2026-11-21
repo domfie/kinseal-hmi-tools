@@ -1,0 +1,31 @@
+{
+  "basis": "user-reported display updated successfully plus uploaded JSONL log",
+  "version": "0.2.4",
+  "target": "windows/386",
+  "device_model": "AMZ043W01",
+  "driver_service": "WinUSB",
+  "log_file": "out2.log",
+  "log_sha256": "7f6c1664e7cfcf41ff67bec655b4c9ab9986d8cbde688d6d154faed4d4282d29",
+  "package_sha256": "17680c070aa89e5b30daec341838b43cd0a688374a44db0d8ac364dd6be1c229",
+  "observations": {
+    "start_to_commit_seconds": 2.167935,
+    "recipe_payload_bytes": 212104,
+    "recipe_write_seconds": 0.113094,
+    "log_result": {
+      "commit_acknowledged": true,
+      "commit_attempted": true,
+      "reset_written": true,
+      "screen_verified": false,
+      "start_acknowledged": true,
+      "start_attempted": true,
+      "status": "commit_confirmed_reset_sent"
+    },
+    "screen_verified_by_user": true
+  },
+  "comparison": {
+    "arm64_0_2_4_start_to_commit_seconds": 0.156849,
+    "arm64_project_updated": false,
+    "same_export_test": "pending; successful x86 export differs from earlier ARM64 export",
+    "cause": "not established; Windows ARM, executable architecture and USB forwarding remain to distinguish"
+  }
+}

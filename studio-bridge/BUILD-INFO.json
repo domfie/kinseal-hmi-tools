@@ -1,0 +1,148 @@
+{
+  "version": "0.1.0",
+  "target": "windows/x86 (Studio ABI, including Windows ARM emulation)",
+  "vendor_studio_sha256": "7e962ae88df814da649c0914deed76ed7331a4bea815d1f3e89e7dbdd309428a",
+  "vendor_dll_sha256": "af71f4c1f9c1f9965d503339befad7ae54d545c3b927b3f29e7a3064f9e02d14",
+  "bridge_dll_sha256": "285707fd0d23c54676d106485a3c74f753485ee1a8e8fad6c03f420505d54d77",
+  "exports": [
+    "AmzUsb_clear_outbuffer",
+    "AmzUsb_connect",
+    "AmzUsb_disconnect",
+    "AmzUsb_init",
+    "AmzUsb_isconnected",
+    "AmzUsb_readRaw",
+    "AmzUsb_writeRaw"
+  ],
+  "imports": {
+    "SETUPAPI.dll": [
+      "SetupDiDestroyDeviceInfoList",
+      "SetupDiEnumDeviceInfo",
+      "SetupDiEnumDeviceInterfaces",
+      "SetupDiGetClassDevsW",
+      "SetupDiGetDeviceInstanceIdW",
+      "SetupDiGetDeviceInterfaceDetailW",
+      "SetupDiGetDeviceRegistryPropertyW",
+      "SetupDiOpenDevRegKey"
+    ],
+    "WINUSB.DLL": [
+      "WinUsb_Free",
+      "WinUsb_Initialize",
+      "WinUsb_QueryInterfaceSettings",
+      "WinUsb_QueryPipe",
+      "WinUsb_ReadPipe",
+      "WinUsb_SetPipePolicy",
+      "WinUsb_WritePipe"
+    ],
+    "ADVAPI32.dll": [
+      "RegCloseKey",
+      "RegOpenKeyExW",
+      "RegQueryValueExW"
+    ],
+    "ole32.dll": [
+      "CLSIDFromString"
+    ],
+    "USER32.dll": [
+      "CharLowerBuffW"
+    ],
+    "api-ms-win-crt-runtime-l1-1-0.dll": [
+      "_execute_onexit_table",
+      "_exit",
+      "_initialize_onexit_table",
+      "_initterm",
+      "_initterm_e",
+      "_register_onexit_function",
+      "abort"
+    ],
+    "api-ms-win-crt-string-l1-1-0.dll": [
+      "_wcsicmp",
+      "strncmp",
+      "wcscat",
+      "wcscpy",
+      "wcslen",
+      "wcsncmp"
+    ],
+    "KERNEL32.dll": [
+      "AcquireSRWLockExclusive",
+      "AcquireSRWLockShared",
+      "CloseHandle",
+      "CreateFileW",
+      "DeleteCriticalSection",
+      "EnterCriticalSection",
+      "GetCurrentProcessId",
+      "GetLastError",
+      "GetProcessHeap",
+      "GetSystemTime",
+      "GetTempPathW",
+      "HeapAlloc",
+      "HeapFree",
+      "InitializeCriticalSection",
+      "LeaveCriticalSection",
+      "ReleaseSRWLockExclusive",
+      "ReleaseSRWLockShared",
+      "SetLastError",
+      "Sleep",
+      "TlsGetValue",
+      "VirtualProtect",
+      "VirtualQuery",
+      "WriteFile"
+    ],
+    "api-ms-win-crt-stdio-l1-1-0.dll": [
+      "__acrt_iob_func",
+      "__stdio_common_vfprintf",
+      "__stdio_common_vsprintf",
+      "fwrite"
+    ],
+    "api-ms-win-crt-heap-l1-1-0.dll": [
+      "calloc",
+      "free"
+    ]
+  },
+  "compiler": "Zig 0.17.1, x86-windows-gnu, -O2 -Wall -Wextra -Werror",
+  "validation": {
+    "packet_core_native": "passed with AddressSanitizer and UndefinedBehaviorSanitizer",
+    "PE_machine": "I386 / PE32 DLL",
+    "export_names": "all seven match original",
+    "ABI": "cdecl, readRaw returns byte count, writeRaw returns boolean 1/0 or disconnected -1",
+    "SetupAPI_structures": "x86 compile-time size assertions passed",
+    "Windows_load_and_Studio_download": "User confirmed successful Studio download and display project update under UTM / Windows ARM on 2026-11-21.",
+    "PowerShell_install_restore": "not executed; prepared copy generated directly on macOS",
+    "batch_install_restore": "Static checks passed: ASCII/CRLF, command length, pinned hashes and delimiter balance. Not executed under Windows."
+  },
+  "sources_sha256": {
+    "Install-StudioBridge.ps1": "651b85956bcc4d16aa12501aa3c6d4bd41f7631dc8e88bed921a80030dfbba99",
+    "LICENSE": "098fad3527d91cda5c5a591a6c58b22bee7098459b70cff2e7f9d80c86bb7884",
+    "README.md": "00a84ac4dd5cc69092b69d32b6fd9d47189f75eaf59c2aedf58651ee952863df",
+    "Restore-StudioBridge.ps1": "2ba0e40e3ff3f72aefa6446cf03601e4e845a5ca054e446db666b4cd8314a464",
+    "bridge.c": "21fb9b782a0ac8a1f8b3ed5bd04bb6764335efe5bc7adc683f3130a1a924d266",
+    "driver/Install-WinUSB.ps1": "25b5452728471fe7f282236d203a9157291f09faf976a27bad8916e7d3c2fb35",
+    "driver/LICENSE": "098fad3527d91cda5c5a591a6c58b22bee7098459b70cff2e7f9d80c86bb7884",
+    "driver/PROVENANCE.json": "ec350b6c66aba6ecff4ac5070d31dd813fd96aee613359ab8e29a4208a9cc3f3",
+    "driver/README.md": "460f2a591eefef674634d28c519fe56426419c007ad9dde70358f8feccf4a703",
+    "driver/domfie_HMI_WinUSB_ARM64.inf": "c2748069f179460dc4b62a4221a9856a8277e81ed4b35a28ba8ac30b1580b218",
+    "driver/install-winusb.bat": "b7104649282569f84689cfaebd42f49497d8fa394dde563a7cbb56ab723190d6",
+    "packet_write.h": "e34feeed6dc9ad05d788c1f5c255a8903d5670134d0c5eb051559e308a098ee8",
+    "packet_write_test.c": "0873f1262e9c3fcdd1fe7a118d79726044cb3dca0bc5879e3c870d7ae581b80d",
+    "patch-studio.bat": "0fd6db3b672c0bd9fa774e8722716478d8b66861e343af4a8e750002a67da6e0"
+  },
+  "packaging_revision": 7,
+  "installation_default": "C:\\Program Files (x86)\\KinSealStudio5.1",
+  "hardware_confirmation": "Exact same bridge DLL bytes as the user-tested studio bridge 0.1.0; only packaging, docs and batch installer added.",
+  "driver_package": {
+    "provider": "domfie",
+    "manufacturer": "domfie",
+    "version": "1.0.2.0",
+    "date": "2026-11-21",
+    "target": "windows/arm64",
+    "inf": "driver/domfie_HMI_WinUSB_ARM64.inf",
+    "signature": "unsigned; no signed catalog",
+    "kernel_driver": "Windows in-box winusb.sys, Microsoft; not bundled",
+    "validation": "Static verification only; renamed INF not yet installed under Windows",
+    "device_name": "Smart Control Device"
+  },
+  "tested_display_models": [
+    "AMZ043W01"
+  ],
+  "test_scope": "User-confirmed Studio project download under Windows ARM / UTM with the analyzed Studio 5.1 build; other models not hardware-tested.",
+  "documentation_language": "en",
+  "own_code_license": "MIT"
+}

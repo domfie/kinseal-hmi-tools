@@ -1,0 +1,20 @@
+{
+  "version": "0.2.7",
+  "observed_failure": "libusb_get_active_config_descriptor: LIBUSB_ERROR_NOT_FOUND (-5)",
+  "observed_device": {
+    "vid": "7365",
+    "pid": "616c",
+    "native_macos_list": "device found by libusb"
+  },
+  "root_cause_boundary": "0.2.6 returned immediately on an unavailable active configuration descriptor before reading advertised descriptors or opening the device",
+  "correction": "Read sole advertised configuration; validate USB layout; open and confirm current configuration=0; select descriptor bConfigurationValue; reread and confirm active descriptor. No selection by usb-info.",
+  "regression": "Observed NOT_FOUND modeled at the actual configuration-selection seam; red before fix, green after. Also tests no changes to existing configuration, read-only diagnostics, ambiguity and failure propagation.",
+  "hardware_probe_upload": "pending",
+  "reference": "https://libusb.sourceforge.io/api-1.0/group__libusb__desc.html",
+  "hardware_validation": {
+    "usb_info": "passed on connected display: advertised configuration 1, interface 0 / alt 0, interrupt 0x01/0x81, MaxPacket 256",
+    "probe_unprivileged": "passed original descriptor failure; reached libusb_claim_interface, which returned LIBUSB_ERROR_ACCESS (-3)",
+    "privileged_probe": "User successfully completed a native macOS upload using a probe report and sudo --detach-kernel-driver.",
+    "kinseal_identity_or_upload": "Successful native upload confirmed by user; 633178 payload bytes reported, commit acknowledged, reset submitted."
+  }
+}

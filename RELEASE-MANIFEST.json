@@ -1,0 +1,36 @@
+{
+  "suggested_repository": "kinseal-hmi-tools",
+  "description": "KinSeal Studio WinUSB bridge and HMI uploader for Windows 11 ARM, UTM on Mac, and Apple Silicon macOS. Tested with AMZ043W01; native macOS uploads confirmed.",
+  "topics": [
+    "kinseal",
+    "hmi",
+    "amz043w01",
+    "windows-11",
+    "windows-11-arm",
+    "windows-arm",
+    "arm64",
+    "utm",
+    "mac",
+    "macos",
+    "apple-silicon",
+    "winusb",
+    "usb",
+    "reverse-engineering",
+    "golang"
+  ],
+  "tested_models": [
+    "AMZ043W01"
+  ],
+  "macos_native_hardware_test": "User-confirmed successful native AMZ043W01 upload with sudo and --detach-kernel-driver.",
+  "own_code_license": "MIT",
+  "assets_sha256": {
+    "kinseal-studio-winusb-github.zip": "5ec826b3f361928ca37200c6adaeb3b69add37a61f37bd5a1a55421ba35336a2",
+    "kinseal-uploader-macos-arm64-v0.2.7.zip": "49b515a5dcdbb5945c5e181a59f297e590ed6f80f039732d67d23451db482e0b",
+    "kinseal-uploader-windows-x86-v0.2.5.zip": "2e505b9e8a57f95e5978c623612d41809e45d81d109b2d2aed05dbd61feb23d2"
+  },
+  "documentation_language": "en",
+  "license_scope": "Independently written components only; libusb, Go, compiler runtimes and manufacturer software retain separate rights/licenses.",
+  "native_macos_version": "0.2.7",
+  "macos_sudo_required_on_tested_setup": true,
+  "rootless_hid_status": "Investigated with native IOKit and HIDAPI; model writes succeeded but no model replies received; not a usable rootless transport."
+}

@@ -1,0 +1,168 @@
+{
+  "basis": "static_analysis_only_no_vendor_binary_executed_no_device_access",
+  "manufacturer_download": "https://www.kinsealhmi.com/Content/upload/zip/2022689233/LoadTool-V5-1-AMZ-AMTDownload-Tools.zip",
+  "installer_filename": "LoadTool_V5.1_setup_2023-10-25_10点.exe",
+  "files_sha256": {
+    "LoadTool5.1.exe": "e6a701c30a5e5b0210ed2bf997473db5b9b2a55e6fca40ec310698e6f2eb478f",
+    "AMZUsb.dll": "af71f4c1f9c1f9965d503339befad7ae54d545c3b927b3f29e7a3064f9e02d14",
+    "model.dat": "e5839a26b1f2f4754541c0cbb7e9a5e717be0e4cdfcec4d62fb645b2a0bee5c9"
+  },
+  "model_dat": {
+    "AMZ043W01": {
+      "Device": 60,
+      "USB": 2,
+      "BottomFile": "AMZ043W01.bin",
+      "HzFile": "HZ.bin"
+    }
+  },
+  "command_functions_va": {
+    "Recipe.dat": {
+      "function": "0x414cc0",
+      "command_store": "0x414d29",
+      "command": "19",
+      "file_reference": "0x414dab",
+      "file_send": "0x414dcb"
+    },
+    "AlarmMuti.dat": {
+      "function": "0x414e28",
+      "command_store": "0x414e91",
+      "command": "16"
+    },
+    "LogoPixel.dat": {
+      "function": "0x417cf4",
+      "command_store": "0x417d82",
+      "command": "1f",
+      "parameters": "LE32 total file length + decimal quotient/remainder chunk index",
+      "chunk_size": 262144,
+      "parameter_stores": [
+        "0x417fdc",
+        "0x417fe5",
+        "0x417fee",
+        "0x417ff7",
+        "0x41800d",
+        "0x418019"
+      ]
+    },
+    "ControlPara.dat": {
+      "function": "0x4194d4",
+      "command_store": "0x4196bc",
+      "command": "0b",
+      "parameters": "decimal quotient/remainder chunk index",
+      "chunk_size": 262144
+    },
+    "upLoad.knr": {
+      "function": "0x418328",
+      "command_store": "0x41853f",
+      "command": "1e",
+      "parameters": "decimal quotient/remainder chunk index",
+      "data_prefix": "BE32 compressed file size, once before splitting",
+      "chunk_size": 262144
+    },
+    "ControlPixel.dat": {
+      "function": "0x41b460",
+      "command_store": "0x41be13",
+      "command": "10",
+      "parameters": "decimal quotient/remainder chunk index + BE32 chunk length",
+      "chunk_size": 262144
+    },
+    "SheetPixel.dat": {
+      "function": "0x416748",
+      "command_store": "0x4169c4",
+      "command": "0f",
+      "parameters": "decimal quotient/remainder chunk index + BE32 chunk length",
+      "chunk_size": 262144
+    },
+    "PLC_COM1": {
+      "command_store": "0x41cd13",
+      "command": "11",
+      "parameters": "LE32 program size"
+    }
+  },
+  "amz_usb": {
+    "connect": "0x10001080",
+    "vid": "7365",
+    "pid": "616c",
+    "interface": 0,
+    "read": "0x10001150",
+    "write": "0x10001180",
+    "out_endpoint": "01",
+    "in_endpoint": "81"
+  },
+  "ack_check": {
+    "function": "0x41209c",
+    "accepted_bytes": [
+      "4f",
+      "4b"
+    ]
+  },
+  "exclusions": [
+    "firmware updates",
+    "font updates",
+    "media boot metadata"
+  ],
+  "hardware_validation": "pending",
+  "studio_cross_check": {
+    "basis": "static_only_no_execution",
+    "files_sha256": {
+      "KinSealStudio5.1.exe": "7e962ae88df814da649c0914deed76ed7331a4bea815d1f3e89e7dbdd309428a",
+      "AMZUsb.dll": "af71f4c1f9c1f9965d503339befad7ae54d545c3b927b3f29e7a3064f9e02d14",
+      "NewUsb.dll": "229004e0acd976945ff856762c4a10baf4c2d3432356009570072daa79139f2b",
+      "modelInfo.dat": "247f6d07eea241d04b55d12d24cbbca7def4a54be10c8bd85067942831b759bf"
+    },
+    "AMZUsb_DLL_identical_to_LoadTool": true,
+    "NewUsb_DLL_identical_to_LoadTool": true,
+    "modelInfo_dat_Device": 60,
+    "modelInfo_dat_USB": 2,
+    "recipe": {
+      "function_va": "0x9cf834",
+      "command_store_va": "0x9cf8e6",
+      "command": "19"
+    },
+    "alarm_multi": {
+      "function_va": "0x9cce78",
+      "command_store_va": "0x9ccf06",
+      "command": "16"
+    },
+    "logo": {
+      "function_va": "0x9c9704",
+      "command_store_va": "0x9c9748",
+      "command": "1f",
+      "layout_confirmed": "LE32 total length + two decimal chunk-number bytes",
+      "parameter_store_va": [
+        "0x9c991f",
+        "0x9c9928",
+        "0x9c9931",
+        "0x9c993a",
+        "0x9c9958",
+        "0x9c9968"
+      ]
+    },
+    "ack": {
+      "function_va": "0x9c74b4",
+      "accepted": [
+        "4f",
+        "4b"
+      ]
+    },
+    "control_para_short_path": {
+      "function_va": "0x9ca994",
+      "wrapper_call_va": "0x9d127b",
+      "command_store_va": "0x9caa11",
+      "page_count_store_va": "0x9caa24",
+      "parameter": "byte 18 = page count; remaining unassigned bytes zeroed in Go",
+      "supplied_export_page_count": 8,
+      "supplied_export_table_bytes": 56320,
+      "larger_table_path": "not enabled pending further Studio analysis"
+    },
+    "control_pixel": {
+      "command_store_va": "0x9d42e7",
+      "chunk_parameters_confirmed": "two decimal index bytes + BE32 chunk length",
+      "size_store_va": [
+        "0x9d44b5",
+        "0x9d44bb",
+        "0x9d44c3",
+        "0x9d44c9"
+      ]
+    }
+  }
+}

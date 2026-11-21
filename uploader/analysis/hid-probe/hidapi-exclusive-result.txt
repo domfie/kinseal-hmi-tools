@@ -1,0 +1,8 @@
+uid=501 euid=501 hidapi=0.15.0
+exclusive=1
+device path=DevSrvsID:4295063258 usage_page=0xff06 usage=1 interface=0
+model_query payload=32 hid_write=33 error=Success
+hid_read_timeout=0
+model_query payload=256 hid_write=257 error=Success
+hid_read_timeout=0
+RESULT: no native HID model reply

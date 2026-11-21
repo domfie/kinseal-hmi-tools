@@ -1,0 +1,247 @@
+{
+  "capture_sha256": "fd4977c7dd8bc4352c61598f9703c38e38d74177e51f4e883938698f6afcae6c",
+  "capture_file": "download.pcapng",
+  "basis": "successful Studio upload reported by user",
+  "start": {
+    "frame": 61,
+    "command": "0x34",
+    "frame_hex": "4b696e5365616c53747564696f4b6973733401010120006008b0fe8d1208779e",
+    "explicit_download_flags_hex": "010101",
+    "uploader_0_2_2_flags_hex": "000000",
+    "studio_static_confirmation": {
+      "command_store": "0x9ca8b9",
+      "flag_stores": [
+        "0x9ca8ca",
+        "0x9ca8d5",
+        "0x9ca8e0"
+      ],
+      "source_fields": [
+        "0x820",
+        "0x824",
+        "0x828"
+      ],
+      "remaining_option_bytes": "uninitialized; not copied"
+    }
+  },
+  "start_to_commit_command_seconds": 0.9678990000000027,
+  "commands": [
+    {
+      "frame": 53,
+      "command": "0x31",
+      "options_hex": "0200000000000000000000000000"
+    },
+    {
+      "frame": 57,
+      "command": "0x53",
+      "options_hex": "009806c018460db0fe8d1208fd8d"
+    },
+    {
+      "frame": 61,
+      "command": "0x34",
+      "options_hex": "01010120006008b0fe8d1208779e"
+    },
+    {
+      "frame": 65,
+      "command": "0x35",
+      "options_hex": "fd8d12040000000400000008779e"
+    },
+    {
+      "frame": 69,
+      "command": "0x0a",
+      "options_hex": "fe8d1210fd8d127e38bf00c01846"
+    },
+    {
+      "frame": 75,
+      "command": "0x35",
+      "options_hex": "000000d89ff60d01000000d89ff6"
+    },
+    {
+      "frame": 79,
+      "command": "0x0b",
+      "options_hex": "000012000000000000000079119a"
+    },
+    {
+      "frame": 85,
+      "command": "0x35",
+      "options_hex": "fc8d12cc119a72f0405508010000"
+    },
+    {
+      "frame": 89,
+      "command": "0x1f",
+      "options_hex": "392a000000006f4b6973730b0000"
+    },
+    {
+      "frame": 95,
+      "command": "0x35",
+      "options_hex": "fc8d12cc119a72f0405508010000"
+    },
+    {
+      "frame": 99,
+      "command": "0x0c",
+      "options_hex": "9ff60dd89ff60dc018460db0fe8d"
+    },
+    {
+      "frame": 105,
+      "command": "0x35",
+      "options_hex": "000000d89ff60d01000000d89ff6"
+    },
+    {
+      "frame": 109,
+      "command": "0x36",
+      "options_hex": "0000004b69734b696e5365616c53"
+    },
+    {
+      "frame": 115,
+      "command": "0x35",
+      "options_hex": "000000e82ff80d01000000e82ff8"
+    },
+    {
+      "frame": 119,
+      "command": "0x1d",
+      "options_hex": "6e5365616c53747564696f4b6973"
+    },
+    {
+      "frame": 125,
+      "command": "0x35",
+      "options_hex": "000000c8b1f60d01000000c8b1f6"
+    },
+    {
+      "frame": 129,
+      "command": "0x0e",
+      "options_hex": "d4be0d109af60d5896f60d209bf6"
+    },
+    {
+      "frame": 135,
+      "command": "0x35",
+      "options_hex": "000000e82ff80d01000000e82ff8"
+    },
+    {
+      "frame": 139,
+      "command": "0x16",
+      "options_hex": "d4be0d109af60d5896f60d209bf6"
+    },
+    {
+      "frame": 143,
+      "command": "0x35",
+      "options_hex": "00000008c0336a0100000008c033"
+    },
+    {
+      "frame": 147,
+      "command": "0x15",
+      "options_hex": "c0336ac8d7be0dd095f60dc01846"
+    },
+    {
+      "frame": 151,
+      "command": "0x35",
+      "options_hex": "000000040000000100000008c033"
+    },
+    {
+      "frame": 155,
+      "command": "0x19",
+      "options_hex": "c0336ac8d7be0dd095f60dc01846"
+    },
+    {
+      "frame": 167,
+      "command": "0x35",
+      "options_hex": "000000e82ff80d01000000e82ff8"
+    },
+    {
+      "frame": 171,
+      "command": "0x12",
+      "options_hex": "c0336ac8d7be0dd095f60dc01846"
+    },
+    {
+      "frame": 177,
+      "command": "0x35",
+      "options_hex": "000000804bdd0d01000000804bdd"
+    },
+    {
+      "frame": 181,
+      "command": "0x14",
+      "options_hex": "c0336ac8d7be0dd095f60dc01846"
+    },
+    {
+      "frame": 187,
+      "command": "0x35",
+      "options_hex": "000000d89ff60d01000000d89ff6"
+    },
+    {
+      "frame": 191,
+      "command": "0x0d",
+      "options_hex": "c0336ac8d7be0dd095f60dc01846"
+    },
+    {
+      "frame": 197,
+      "command": "0x35",
+      "options_hex": "0000007085420d01000000708542"
+    },
+    {
+      "frame": 201,
+      "command": "0x1e",
+      "options_hex": "00001231d39c00c018460decfc8d"
+    },
+    {
+      "frame": 209,
+      "command": "0x35",
+      "options_hex": "fc8d12cc119a72f0405508010000"
+    },
+    {
+      "frame": 213,
+      "command": "0x10",
+      "options_hex": "0000000208201210000000c01846"
+    },
+    {
+      "frame": 223,
+      "command": "0x35",
+      "options_hex": "fb8d12cc119a72f0405508010000"
+    },
+    {
+      "frame": 227,
+      "command": "0x0f",
+      "options_hex": "0000000101ee12ecfa2b6ab88b98"
+    },
+    {
+      "frame": 235,
+      "command": "0x35",
+      "options_hex": "fb8d12cc119a72f0405508010000"
+    },
+    {
+      "frame": 239,
+      "command": "0x11",
+      "options_hex": "141200006222089880f30d0099f6"
+    },
+    {
+      "frame": 245,
+      "command": "0x35",
+      "options_hex": "000000d89ff60d01000000d89ff6"
+    },
+    {
+      "frame": 249,
+      "command": "0x1b",
+      "options_hex": "ffffff2417e9000054f100010000"
+    },
+    {
+      "frame": 253,
+      "command": "0x1a",
+      "options_hex": "ffffff2417e9000054f100010000"
+    }
+  ],
+  "limitations": [
+    "Capture truncates 65536-byte payload URBs to 65508 captured data bytes (28 bytes missing); full wire hashes cannot be verified.",
+    "Studio sends larger payloads in 65536-byte URBs; uploader leaves partitioning to WinUSB. No change in 0.2.3.",
+    "0.2.4 hardware upload pending. Changing ControlPara does not establish that WinUSB transmitted all payload bytes."
+  ],
+  "control_para": {
+    "frame": 79,
+    "command": "0x0b",
+    "first_two_option_bytes": "0000",
+    "uploader_0_2_3": "0800",
+    "correction": "Use frameSegments block number; do not inject page count",
+    "prior_static_interpretation": "Static page-count variant exists, but does not match this captured Studio upload"
+  },
+  "hardware_0_2_3": {
+    "download_window_shown": true,
+    "project_updated": false,
+    "start_to_commit_seconds": 0.1537
+  }
+}
